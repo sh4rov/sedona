@@ -6,7 +6,7 @@ module.exports = {
 
   views: {
     src: './src/pug/*.pug',
-    dest: './build/',
+    dest: './build',
 
     watch: [
       './src/pug/**/*.pug',

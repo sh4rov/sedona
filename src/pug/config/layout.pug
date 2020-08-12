@@ -9,10 +9,13 @@ html(lang="ru")
     block styles
       link(rel="stylesheet", href="css/main.min.css")
   body
-    block header
-      p some header content
-    block content
-      main.main
-    block footer
-      p some footer content
+    .wrapper
+
+      include ../../modules/header/header.pug
+
+      .content
+        block content
+
+      include ../../modules/footer/footer.pug
+
     block scripts

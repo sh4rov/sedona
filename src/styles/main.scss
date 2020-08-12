@@ -1,9 +1,19 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import 'config/vars';
+@import 'config/base';
+@import 'config/fonts';
 @import 'utils/smart-grid';
 
 body {
   @include wrapper;
-  @include col-padding;
-  background-color: #ddd;
-  color: #333;
-  font-size: 2rem;
+  background: grey;
 }
+
+p {
+  @include row-flex();
+  @include size-lg(6);
+  @include size-md(8);
+  @include size-xs(12);
+}
+
+@import '../modules/modules';

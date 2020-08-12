@@ -6,15 +6,16 @@ import htmlValidator from 'gulp-w3c-html-validator'
 import plumber from 'gulp-plumber'
 import newer from 'gulp-newer'
 import changed from 'gulp-changed'
+import debug from 'gulp-debug'
 import browserSync from 'browser-sync'
-const bs = browserSync.create();
+let reload = browserSync.reload;
 
-export const html = () => 
+export const html = () =>
   src(paths.views.src)
   .pipe(plumber())
-  .pipe(changed(paths.dest))
+  .pipe(debug())
+  .pipe(changed(paths.dest), { extention: '.html' })
   .pipe(pug({ pretty: true }))
   .pipe(htmlValidator())
-  .pipe(plumber.stop())
-  .pipe(dest(paths.dest))
-  // .pipe(bs.reload())
+  .pipe(dest(paths.views.dest))
+  .on('end', reload)

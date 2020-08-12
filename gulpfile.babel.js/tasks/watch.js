@@ -20,20 +20,12 @@ function stream(done) {
   done();
 }
 
-function watchFiles(cb) {
+function watchFiles() {
   watch(paths.styles.watch, styles)
   watch(gridOption, grid).on('change', stream)
   watch(paths.views.watch, html).on('change', reload)
   watch(paths.images.src, series(images, reload))
-  cb();
 }
-
-/** 
- * Следит за папкой srс
- * Если файл из папки srс был удален - 
- * удалит файл из папки build и выдаст уведомление
- * 
- */
 
 const watchDir = watch(paths.images.src);
 

@@ -9,7 +9,7 @@ import newer from 'gulp-newer'
 // import paths from '../paths'
 
 export const images = () =>
-  src(paths.images.src)
+  src(paths.images.src, { since: lastRun(images)})
   .pipe(newer(paths.images.dest))
   .pipe(imagemin())
   .pipe(dest(paths.images.dest))
