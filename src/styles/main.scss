@@ -1,0 +1,9 @@
+@import 'utils/smart-grid';
+
+body {
+  @include wrapper;
+  @include col-padding;
+  background-color: #ddd;
+  color: #333;
+  font-size: 2rem;
+}
