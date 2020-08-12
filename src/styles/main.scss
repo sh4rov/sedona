@@ -4,7 +4,22 @@
 @import 'config/fonts';
 @import 'utils/smart-grid';
 
+html, body { height: 100%; }
+
 body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.wrapper {
   @include wrapper;
   background: grey;
 }
