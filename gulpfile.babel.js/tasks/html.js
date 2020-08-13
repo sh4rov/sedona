@@ -8,6 +8,7 @@ import newer from 'gulp-newer'
 import changed from 'gulp-changed'
 import debug from 'gulp-debug'
 import browserSync from 'browser-sync'
+import webpHTML from 'gulp-webp-html'
 let reload = browserSync.reload;
 
 export const html = () =>
@@ -16,6 +17,7 @@ export const html = () =>
   .pipe(debug())
   .pipe(changed(paths.dest), { extention: '.html' })
   .pipe(pug({ pretty: true }))
+  .pipe(webpHTML())
   .pipe(htmlValidator())
   .pipe(dest(paths.views.dest))
   .on('end', reload)

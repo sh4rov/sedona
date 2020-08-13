@@ -27,5 +27,16 @@ module.exports = {
   images: {
     src: './src/img/**/*.{png,jpg,webp}',
     dest: './build/img'
+  },
+
+  js: {
+    src: './src/js/**/*.js',
+    dest: './build/js',
+    modules: './src/modules/**/*.js',
+
+    watch: [
+      './src/js/**/*.js',
+      './src/modules/**/*.js'
+    ]
   }
 }

@@ -11,11 +11,14 @@ html(lang="ru")
   body
     .wrapper
 
+      //- Header
       include ../../modules/header/header.pug
 
       main.content
         block content
 
+      //- Footer
       include ../../modules/footer/footer.pug
 
     block scripts
+      script(src='main.min.js')

@@ -6,6 +6,7 @@ import { styles } from './tasks/styles'
 import { clean } from  './tasks/clean'
 import { serve } from './tasks/serve'
 import { images } from './tasks/images'
+import { js } from './tasks/scripts'
 import { grid } from './tasks/smartGrid'
 
 global.paths = require('./paths');
@@ -22,9 +23,10 @@ export const dev = series(build, serve);
 export default dev
 
 export {
-  styles,
   html,
-  serve,
+  styles,
   images,
+  js,
+  serve,
   clean
 }
