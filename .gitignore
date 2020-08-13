@@ -12,6 +12,7 @@ Thumbs.db
 *.log*
 node_modules/
 yarn.lock
+yarn-error.log
 
 # Папка с собранными файлами проекта
 build/
