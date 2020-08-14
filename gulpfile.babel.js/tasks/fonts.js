@@ -8,6 +8,6 @@ import newer from 'gulp-newer'
 
 export const fonts = () =>
   src(paths.fonts.src)
-  .pipe(newer(paths.fonts.dest))
   .pipe(plumber())
+  .pipe(newer(paths.fonts.dest))
   .pipe(dest(paths.fonts.dest))

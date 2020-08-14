@@ -1,17 +1,18 @@
-import browserSync from 'browser-sync'
+// import browserSync from 'browser-sync'
 import { watch, series, parallel } from 'gulp'
 import { html } from './html'
 import { styles } from './styles'
 import { images } from './images'
 import { js } from './scripts'
-import { fosnt } from './fonts'
+import { fonts } from './fonts'
 import { grid } from './smartGrid'
 import changed from 'gulp-changed'
 const gridOption = './gridOption.js';
-const reload = browserSync.reload;
+const bs = require('browser-sync').create();
+import paths from '../paths'
 
 function serve() {
-  browserSync.init({
+  bs.init({
     server: {
       baseDir: './build'
     },
@@ -19,12 +20,14 @@ function serve() {
     open: false
   });
 
-  watch(paths.styles.watch, styles)
-  watch(gridOption, grid).on('change', reload)
+  watch(gridOption, grid).on('change', bs.reload)
+  watch(paths.styles.watch, {
+    events: 'change'
+  }, styles)
   watch(paths.images.src, images)
   watch(paths.views.watch, html)
-  watch(paths.fonts.src, { events: 'change' }, fonts)
-  watch(paths.js.watch, { events: 'change' }, js)
+  watch(paths.fonts.src, fonts)
+  watch(paths.js.watch, js)
 
   const watchDir = watch(
     paths.dest + '/*.');
