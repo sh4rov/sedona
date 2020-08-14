@@ -4,6 +4,7 @@ import { html } from './html'
 import { styles } from './styles'
 import { images } from './images'
 import { js } from './scripts'
+import { fosnt } from './fonts'
 import { grid } from './smartGrid'
 import changed from 'gulp-changed'
 const gridOption = './gridOption.js';
@@ -22,10 +23,11 @@ function serve() {
   watch(gridOption, grid).on('change', reload)
   watch(paths.images.src, images)
   watch(paths.views.watch, html)
+  watch(paths.fonts.src, { events: 'change' }, fonts)
   watch(paths.js.watch, { events: 'change' }, js)
 
   const watchDir = watch(
-    paths.dest + '*.');
+    paths.dest + '/*.');
 
   watchDir.on('unlink', function (path, stats) {
     console.log(`File ${path} was removed`);

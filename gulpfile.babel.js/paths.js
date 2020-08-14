@@ -38,5 +38,10 @@ module.exports = {
       './src/js/**/*.js',
       './src/modules/**/*.js'
     ]
+  },
+
+  fonts: {
+    src: './src/fonts/**/*.{ttf, woff, woff2}',
+    dest: './build/fonts'
   }
 }
