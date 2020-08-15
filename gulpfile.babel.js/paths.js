@@ -25,8 +25,9 @@ module.exports = {
   },
 
   images: {
-    src: './src/img/**/*.{png,jpg,webp}',
-    dest: './build/img'
+    root: './src/img',
+    src: './src/img/**/*.{png,jpg,jpeg,webp}',
+    dest: './build/img',
   },
 
   js: {

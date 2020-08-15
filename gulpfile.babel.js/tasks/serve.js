@@ -1,15 +1,16 @@
-// import browserSync from 'browser-sync'
-import { watch, series, parallel } from 'gulp'
+import { watch } from 'gulp'
 import { html } from './html'
 import { styles } from './styles'
 import { images } from './images'
 import { js } from './scripts'
 import { fonts } from './fonts'
 import { grid } from './smartGrid'
-import changed from 'gulp-changed'
 const gridOption = './gridOption.js';
 const bs = require('browser-sync').create();
 import paths from '../paths'
+import path from 'path'
+import del from 'del'
+import cache from 'gulp-cache'
 
 function serve() {
   bs.init({
@@ -20,21 +21,28 @@ function serve() {
     open: false
   });
 
-  watch(gridOption, grid).on('change', bs.reload)
+  watch(gridOption, grid).on('change', bs.reload);
+
   watch(paths.styles.watch, {
-    events: 'change'
-  }, styles)
-  watch(paths.images.src, images)
-  watch(paths.views.watch, html)
-  watch(paths.fonts.src, fonts)
-  watch(paths.js.watch, js)
+    events: ['add', 'change']
+  }, styles);
 
-  const watchDir = watch(
-    paths.dest + '/*.');
-
-  watchDir.on('unlink', function (path, stats) {
-    console.log(`File ${path} was removed`);
+  watch(paths.images.src, images).on('unlink', function (filepath) {
+    let filePathFromSrc = path.relative(path.resolve('./src/img/**/*.*'), filepath);
+    let destFilePath = path.resolve(paths.dest, filePathFromSrc);
+    del.sync(destFilePath);
   });
+
+  watch(paths.views.watch, {
+    events: ['add', 'change']
+  }, html);
+
+  watch(paths.fonts.src, {
+    events: 'add'
+  }, fonts);
+
+  watch(paths.js.watch, js);
+
 }
 
 export { 
