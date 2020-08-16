@@ -10,7 +10,6 @@ const bs = require('browser-sync').create();
 import paths from '../paths'
 import path from 'path'
 import del from 'del'
-import cache from 'gulp-cache'
 
 function serve() {
   bs.init({
@@ -28,8 +27,8 @@ function serve() {
   }, styles);
 
   watch(paths.images.src, images).on('unlink', function (filepath) {
-    let filePathFromSrc = path.relative(path.resolve('./src/img/**/*.*'), filepath);
-    let destFilePath = path.resolve(paths.dest, filePathFromSrc);
+    let filePathFromSrc = path.relative(path.resolve('src'), filepath);
+    let destFilePath = path.resolve('build', filePathFromSrc);
     del.sync(destFilePath);
   });
 

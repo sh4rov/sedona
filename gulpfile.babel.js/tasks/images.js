@@ -4,9 +4,7 @@ import {
   lastRun
 } from 'gulp'
 import cached from 'gulp-cached'
-import cache, {
-  clearAll
-} from 'gulp-cache'
+import cache from 'gulp-cache'
 import imagemin from 'gulp-imagemin'
 import remember from 'gulp-remember'
 import plumber from 'gulp-plumber'
@@ -14,10 +12,6 @@ import debug from 'gulp-debug'
 import newer from 'gulp-newer'
 import webp from 'gulp-webp'
 import paths from '../paths'
-import {
-  cleanup
-} from 'browser-sync'
-
 
 export const images = () =>
   src(paths.images.src)
