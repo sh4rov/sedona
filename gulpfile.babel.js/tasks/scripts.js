@@ -8,7 +8,7 @@ import terser from 'gulp-terser'
 import concat from 'gulp-concat'
 import eslint from 'gulp-eslint'
 
-export const js = () =>
+module.exports = () => 
   src([
     paths.js.src,
     paths.js.modules

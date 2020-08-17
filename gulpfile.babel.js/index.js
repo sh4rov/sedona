@@ -1,12 +1,12 @@
 'use strict';
 
 import { series, parallel } from 'gulp'
-import { html } from './tasks/html'
-import { styles } from './tasks/styles'
-import { clean } from  './tasks/clean'
-import { serve } from './tasks/serve'
-import { images } from './tasks/images'
-import { js } from './tasks/scripts'
+import html from './tasks/html'
+import styles from './tasks/styles'
+import clean from  './tasks/clean'
+import serve from './tasks/serve'
+import images from './tasks/images'
+import js from './tasks/scripts'
 import { grid } from './tasks/smartGrid'
 import cache from 'gulp-cache'
 
