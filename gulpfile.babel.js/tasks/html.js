@@ -2,14 +2,10 @@
 
 import { src, dest, lastRun } from 'gulp';
 import pug from 'gulp-pug';
-import htmlValidator from 'gulp-w3c-html-validator';
 import plumber from 'gulp-plumber';
-import newer from 'gulp-newer';
 import changed from 'gulp-changed';
 import debug from 'gulp-debug';
-import browserSync from 'browser-sync';
 import webpHTML from 'gulp-webp-html';
-let reload = browserSync.reload;
 
 const html = () => {
   return src(paths.views.src)
@@ -24,7 +20,6 @@ const html = () => {
       })
     )
     .pipe(webpHTML())
-    .pipe(htmlValidator())
     .pipe(dest(paths.views.dest));
 };
 

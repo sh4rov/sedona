@@ -5,23 +5,17 @@ module.exports = {
   gridOption: './tasks/gridOption.js',
 
   views: {
-    src: './src/pug/**/*.pug',
+    src: './src/pug/*.pug',
     dest: './build',
 
-    watch: [
-      './src/pug/**/*.pug',
-      './src/modules/**/*.pug'
-    ]
+    watch: ['./src/pug/**/*.pug', './src/modules/**/*.pug'],
   },
 
   styles: {
     src: './src/styles/**/*.scss',
     dest: './build/css',
 
-    watch: [
-      './src/styles/**/*.scss',
-      './src/modules/**/*.scss'
-    ]
+    watch: ['./src/styles/**/*.scss', './src/modules/**/*.scss'],
   },
 
   images: {
@@ -35,14 +29,11 @@ module.exports = {
     dest: './build/js',
     modules: './src/modules/**/*.js',
 
-    watch: [
-      './src/js/**/*.js',
-      './src/modules/**/*.js'
-    ]
+    watch: ['./src/js/**/*.js', './src/modules/**/*.js'],
   },
 
   fonts: {
     src: './src/fonts/**/*.{ttf,woff,woff2}',
-    dest: './build/fonts'
-  }
-}
+    dest: './build/fonts',
+  },
+};
