@@ -1,5 +1,3 @@
 import cache from 'gulp-cache'
-
-module.exports = function() {
-  return cache.clearAll();
-}
+const cacheClear = () => cache.clearAll();
+module.exports = cacheClear;

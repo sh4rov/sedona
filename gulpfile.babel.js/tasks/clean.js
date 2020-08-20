@@ -1,4 +1,3 @@
 import del from 'del';
-
-module.exports = () => 
-  del(paths.dest)
+const clean = () => del(paths.dest);
+module.exports = clean;

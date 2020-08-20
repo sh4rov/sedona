@@ -1,12 +1,14 @@
-import browserSync from "browser-sync";
-const bs = browserSync.create();
-const gridOption = "./gridOption.js";
+import browserSync from 'browser-sync';
+const server = browserSync.create();
 
-module.exports = () =>
-  bs.init({
+const serve = () => {
+  server.init({
     server: {
-      baseDir: "./build",
+      baseDir: './build',
     },
     notify: false,
     open: false,
-  })
+  });
+};
+
+module.exports = serve;

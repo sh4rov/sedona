@@ -5,7 +5,7 @@ module.exports = {
   gridOption: './tasks/gridOption.js',
 
   views: {
-    src: './src/pug/*.pug',
+    src: './src/pug/**/*.pug',
     dest: './build',
 
     watch: [
