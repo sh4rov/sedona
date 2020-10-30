@@ -5,7 +5,7 @@ module.exports = {
   offset: '30px',
   mobileFirst: false,
   container: {
-    maxWidth: '1280px',
+    maxWidth: '1110px',
     fields: '30px',
   },
   breakPoints: {
@@ -26,7 +26,7 @@ module.exports = {
     },
   },
   mixinNames: {
-    container: 'wrapper',
+    container: 'container',
     row: 'row-flex',
     rowFloat: 'row-float',
     rowInlineBlock: 'row-ib',

@@ -1,5 +1,6 @@
 import { src, dest } from 'gulp';
 import plumber from 'gulp-plumber';
+import debug from 'gulp-debug';
 import babel from 'gulp-babel';
 import terser from 'gulp-terser';
 import concat from 'gulp-concat';
@@ -11,6 +12,7 @@ const js = () => {
     sourcemaps: true,
   })
     .pipe(plumber())
+    .pipe(debug())
     .pipe(babel())
     .pipe(eslint())
     .pipe(eslint.format())

@@ -1,12 +1,23 @@
-import { src, dest, lastRun } from 'gulp';
+import { src, dest } from 'gulp';
 
 import cache from 'gulp-cache';
-import imagemin from 'gulp-imagemin';
-import remember from 'gulp-remember';
+import image from 'gulp-image';
 import plumber from 'gulp-plumber';
 import debug from 'gulp-debug';
 import newer from 'gulp-newer';
 import webp from 'gulp-webp';
+
+const imageConfig = {
+  pngquant: true,
+  optipng: false,
+  zopflipng: true,
+  jpegRecompress: false,
+  mozjpeg: true,
+  gifsicle: true,
+  svgo: true,
+  concurrent: 10,
+  quiet: true
+}
 
 const images = () => {
   return src(paths.images.src)
@@ -15,25 +26,16 @@ const images = () => {
     .pipe(debug())
     .pipe(
       webp({
-        quality: 80,
+        quality: 65,
       })
     )
     .pipe(dest(paths.images.dest))
     .pipe(src(paths.images.src))
     .pipe(
       cache(
-        imagemin({
-          interlaced: true,
-          progressive: true,
-          optimizationLevel: 5,
-          svgoPlugins: [
-            {
-              removeViewBox: true,
-            },
-          ],
-        }),
+        image(imageConfig),
         {
-          name: 'imagemin',
+          name: 'images',
         }
       )
     )
