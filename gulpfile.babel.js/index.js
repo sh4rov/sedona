@@ -19,7 +19,6 @@ export const html = series(data, pages);
 export const build = series(clean, svg, parallel(data, html, styles, js, images, fonts));
 export const prod = series(clean, parallel(html, styles, js, images, fonts));
 
-
 export default serve;
 
 export { pages, styles, images, fonts, js, serve, clean, data, cacheClear, svg, deploy };
