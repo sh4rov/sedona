@@ -15,7 +15,7 @@ const svgConfig = {
       render: {
         scss: {
           dest: '../../../../src/styles/utils/_sprite.scss',
-          template: 'src/styles/utils/_sprite_template.scss',
+          template: 'src/styles/config/_sprite_template.scss',
         },
       },
     },

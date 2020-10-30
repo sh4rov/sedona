@@ -8,7 +8,11 @@ module.exports = {
     src: './src/pug/*.pug',
     dest: './build',
 
-    watch: ['./src/pug/**/*.pug', './src/modules/**/*.pug'],
+    watch: [
+      './src/pug/**/*.pug',
+      './src/modules/**/*.pug',
+      './src/components/**/*.pug'
+    ],
   },
 
   data: {
@@ -22,7 +26,11 @@ module.exports = {
     src: './src/styles/**/*.scss',
     dest: './build/css',
 
-    watch: ['./src/styles/**/*.scss', './src/modules/**/*.scss'],
+    watch: [
+      './src/styles/**/*.scss',
+      './src/modules/**/*.scss',
+      './src/components/**/*.scss'
+    ],
   },
 
   images: {
