@@ -1,8 +1,6 @@
-@import '../../node_modules/normalize.css/normalize.css';
 @import 'config/vars';
 @import 'config/base';
 @import 'config/fonts';
-@import 'utils/smart-grid';
 
 html, body {
   height: 100%;
@@ -19,7 +17,6 @@ body {
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
-  @include wrapper;
 }
 
 .content {

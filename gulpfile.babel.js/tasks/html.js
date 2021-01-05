@@ -6,25 +6,17 @@ import plumber from 'gulp-plumber';
 import debug from 'gulp-debug';
 import pretty from 'gulp-pretty-html';
 
-import data from './data';
-import getJsonData from '../util/getJsonData';
-
-
-
-const pages = () => {
-
-  const pugConfig = {
-    locals: {...getJsonData("./tmp/data.json")}
-  };
-
+const html = () => {
   return src(paths.views.src)
     .pipe(plumber())  
     .pipe(debug())
-    .pipe(pug(pugConfig))
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(pretty({
       indent_size: 2,
     }))
     .pipe(dest(paths.views.dest));
 };
 
-module.exports = pages;
+module.exports = html;

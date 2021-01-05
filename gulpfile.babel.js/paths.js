@@ -41,8 +41,13 @@ module.exports = {
 
   svg: {
     src: './src/img/icons/**/*.svg',
-    dest: './build/img/sprite',
+    dest: './build/img/icons',
   },
+
+  svgSprite: {
+    src: './src/img/sprite/*.svg',
+  },
+
 
   js: {
     src: './src/js/**/*.js',
