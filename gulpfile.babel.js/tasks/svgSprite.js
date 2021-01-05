@@ -1,12 +1,8 @@
 import { src, dest } from 'gulp';
 import svgstore from 'gulp-svgstore';
-import svgmin from 'gulp-svgmin';
 import cheerio from 'gulp-cheerio';
-import replace from 'gulp-replace';
-import plumber from 'gulp-plumber';
 import debug from 'gulp-debug';
 import inject from 'gulp-inject'
-import paths from '../paths'
 import pretty from 'gulp-pretty-html'
 
 let svgSprite = () => {
