@@ -5,6 +5,7 @@ import images from './images';
 import js from './scripts';
 import fonts from './fonts';
 import svg from './svg';
+import svgSprite from './svgSprite';
 import paths from '../paths';
 import path from 'path';
 import del from 'del';
@@ -32,6 +33,8 @@ const serve = () => {
   watch(paths.fonts.src, fonts).on('change', bs.reload);
 
   watch(paths.svg.src, svg).on('change', bs.reload);
+
+  watch(paths.svgSprite.src, svgSprite).on('change', bs.reload);
 
   watch(paths.images.src, images).on('unlink', function (filepath) {
     let filePathFromSrc = path.relative(path.resolve('src'), filepath);
