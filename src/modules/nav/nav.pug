@@ -5,5 +5,5 @@ nav.nav
 
 
   ul.nav__list
-    each i in nav
-      li.nav__item: a.nav__link(href= i.link)= i.title
+    each value in nav
+      li.nav__item: a.nav__link(href= value.link)= value.title

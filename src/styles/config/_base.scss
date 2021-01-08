@@ -50,8 +50,14 @@ body {
 }
 
 .button {
-  border: none;
   background-color: transparent;
   padding: 5px;
   outline-width: 1px;
+  font-family: inherit;
+  border: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .4);
+  }
 }
