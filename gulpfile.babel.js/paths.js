@@ -61,4 +61,8 @@ module.exports = {
     src: './src/fonts/**/*.{ttf,woff,woff2}',
     dest: './build/fonts',
   },
+
+  data: {
+    src: './src/data/data.json'
+  },
 };

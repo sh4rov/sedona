@@ -12,13 +12,6 @@ const svg = function () {
     .pipe(plumber())
     .pipe(debug())
     .pipe(
-      svgmin({
-        js2svg: {
-          pretty: true,
-        },
-      })
-    )
-    .pipe(
       cheerio({
         run: function ($) {
           $('[fill]').removeAttr('fill');

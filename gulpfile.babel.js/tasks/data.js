@@ -3,11 +3,10 @@
 import { src, dest } from 'gulp';
 import pug from 'gulp-pug';
 import data from 'gulp-data'
-import fs from 'fs'
-import pretty from 'gulp-pretty-html';
 
 import plumber from 'gulp-plumber';
 import debug from 'gulp-debug';
+import fs from 'fs'
 
 import paths from '../paths'
 
@@ -23,7 +22,6 @@ const html = () => {
     }))
     .pipe(pretty({
       indent_size: 2,
-      indent_char: ' ',
     }))
     .pipe(dest(paths.views.dest));
 };

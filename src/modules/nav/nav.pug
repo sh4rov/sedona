@@ -1,0 +1,9 @@
+nav.nav
+  button(type='button').button.nav__button.nav__button_close
+    svg.nav__icon
+      use(xlink:href='#icon-cross')
+
+
+  ul.nav__list
+    each i in nav
+      li.nav__item: a.nav__link(href= i.link)= i.title

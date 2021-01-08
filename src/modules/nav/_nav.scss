@@ -1,0 +1,37 @@
+.nav {
+  position: relative;
+  background-color: $blue;
+
+  &__button {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+  }
+
+  &__icon {
+    width: 23px;
+    height: 22px;
+
+    fill: $white;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  &__link {
+    display: block;
+    font-size: $fs-medium;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+    line-height: 1;
+    padding: rem(18.5px) 0;
+  }
+}
