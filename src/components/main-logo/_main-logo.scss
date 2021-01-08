@@ -1,0 +1,26 @@
+.main-logo {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  min-width: 138px;
+  min-height: 70px;
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    fill: $blue;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+}

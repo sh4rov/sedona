@@ -3,7 +3,10 @@ nav.nav
     svg.nav__icon
       use(xlink:href='#icon-cross')
 
-
   ul.nav__list
     each value in nav
       li.nav__item: a.nav__link(href= value.link)= value.title
+
+    
+  .nav__logo
+    include ../../components/main-logo/main-logo
