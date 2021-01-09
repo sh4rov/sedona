@@ -5,16 +5,16 @@
     top: 12px;
     right: 15px;
     z-index: 1;
+    line-height: 0;
   }
 
   &__icon {
-    width: 23px;
-    height: 22px;
-
-    fill: $white;
+    fill: $blue;
+    appearance: none;
   }
 
   &__list {
+    display: none;
     position: relative;
     list-style-type: none;
     background-color: $blue;
@@ -34,5 +34,23 @@
     text-align: center;
     line-height: 1;
     padding: rem(18.5px) 0;
+  }
+
+  &__logo {
+    text-align: center;
+  }
+}
+
+.nav.nav_opened {
+  .nav__list {
+    display: block;
+  }
+
+  .nav__icon {
+    fill: $white;
+  }
+  
+  .icon-nav-toggle__open  {
+    display: block;
   }
 }

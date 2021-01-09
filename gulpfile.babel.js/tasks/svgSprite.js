@@ -4,7 +4,6 @@ import svgmin from 'gulp-svgmin'
 import cheerio from 'gulp-cheerio';
 import debug from 'gulp-debug';
 import inject from 'gulp-inject'
-import pretty from 'gulp-pretty-html'
 
 let svgSprite = () => {
   const svgs = src('./src/img/sprite/*.svg')
@@ -23,9 +22,6 @@ let svgSprite = () => {
 
   return src('./src/pug/config/svg.pug')
     .pipe(inject(svgs, { transform: fileContents }))
-    // .pipe(pretty({
-    //   indent_size: 2,
-    // }))
     .pipe(debug({
       title: 'svg sprite added:'
     }))

@@ -1,7 +1,7 @@
 nav.nav
-  button(type='button').button.nav__button.nav__button_close
-    svg.nav__icon
-      use(xlink:href='#icon-cross')
+  button(type='button').button.nav__button.js-toggle
+    svg(width="23" height="22")
+      use.nav__icon(xlink:href='#icon-menu')
 
   ul.nav__list
     each value in nav
