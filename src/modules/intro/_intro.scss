@@ -1,0 +1,65 @@
+.intro {
+
+  background-image: url('../img/hero-shape.svg'),
+                    url('../img/photo-background@1x.jpg');
+
+  background-size: 768px 37px, 768px 512px;
+  background-position: bottom -1px center, top;
+
+  background-repeat: no-repeat, no-repeat;
+
+  @media (min-width: 700px) {
+    background-size: auto, auto;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding-top: 75px;
+    padding-bottom: 48px;
+  }
+
+  &__box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__box_first { margin-bottom: 60px; }
+  &__box_second { 
+    width: 280px;
+    height: 48px;
+    margin-bottom: 65px;
+  }
+
+  &__box_third {
+    width: 197px;
+    height: 54px;
+  }
+
+  &__text-svg {
+    &_first {
+      width: 190px;
+      height: 45px;
+      fill: $blue;
+      margin-bottom: 10px;
+    }
+  
+    &_second {
+      width: 256px;
+      height: 30px;
+      fill: #766357;
+    }
+  
+    &_main {
+      fill:$white;
+    }
+  
+    &_last {
+      fill: $white;
+    }
+  }
+
+}
