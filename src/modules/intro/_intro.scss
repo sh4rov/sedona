@@ -1,15 +1,19 @@
 .intro {
 
-  background-image: url('../img/hero-shape.svg'),
-                    url('../img/photo-background@1x.jpg');
+  &__top {
+    padding-top: 75px;
+    padding-bottom: 48px;
+    background-image: url('../img/hero-shape.svg'),
+                      url('../img/photo-background@1x.jpg');
 
-  background-size: 768px 37px, 768px 512px;
-  background-position: bottom -1px center, top;
+    background-size: 768px 37px, 768px 512px;
+    background-position: bottom -1px center, top;
 
-  background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat, no-repeat;
 
-  @media (min-width: 700px) {
-    background-size: auto, auto;
+    @media (min-width: 700px) {
+      background-size: auto, auto;
+    }
   }
 
   &__inner {
@@ -17,8 +21,6 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    padding-top: 75px;
-    padding-bottom: 48px;
   }
 
   &__box {
@@ -60,6 +62,23 @@
     &_last {
       fill: $white;
     }
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.23;
+  }
+
+  &__bottom {
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 42px;
+    padding-bottom: 30px;
+
+    background-image: url('../img/hero-shape-second.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
   }
 
 }
