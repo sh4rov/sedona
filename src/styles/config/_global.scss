@@ -1,0 +1,30 @@
+.tac { text-align: center }
+
+.container {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.h-lvl-2 {
+  font-size: rem(18px);
+  font-weight: 700;
+}
+
+.title {
+
+}
+
+.desc {
+  
+}
+
+.numb {
+  position: relative;
+  display: inline-block;
+  font-size: rem(14px);
+
+  &::before,
+  &::after {
+    content: '\2014'
+  }
+}

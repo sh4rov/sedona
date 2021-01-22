@@ -1,15 +1,20 @@
 .intro {
 
-  background-image: url('../img/hero-shape.svg'),
-                    url('../img/photo-background@1x.jpg');
+  &__top {
+    @extend .tac;
+    padding-top: 47px;
+    padding-bottom: 48px;
+    background-image: url('../img/hero-shape.svg'),
+                      url('../img/photo-background@1x.jpg');
 
-  background-size: 768px 37px, 768px 512px;
-  background-position: bottom -1px center, top;
+    background-size: 768px 37px, 768px 512px;
+    background-position: bottom -1px center, top;
 
-  background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat, no-repeat;
 
-  @media (min-width: 700px) {
-    background-size: auto, auto;
+    @media (min-width: 700px) {
+      background-size: auto, auto;
+    }
   }
 
   &__inner {
@@ -17,8 +22,6 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    padding-top: 75px;
-    padding-bottom: 48px;
   }
 
   &__box {
@@ -41,15 +44,15 @@
 
   &__text-svg {
     &_first {
-      width: 190px;
-      height: 45px;
+      width: 146px;
+      height: 34px;
       fill: $blue;
       margin-bottom: 10px;
     }
   
     &_second {
-      width: 256px;
-      height: 30px;
+      width: 200px;
+      height: 22px;
       fill: #766357;
     }
   
@@ -60,6 +63,31 @@
     &_last {
       fill: $white;
     }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  &__desc {
+    font-size: rem(14px);
+    text-transform: uppercase;
+    line-height: 1.85;
+    letter-spacing: 0.1px;
+  }
+
+  &__bottom {
+    @extend .tac;
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 42px;
+    padding-bottom: 30px;
+
+    background-image: url('../img/hero-shape-second.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
   }
 
 }

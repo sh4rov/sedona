@@ -1,4 +1,5 @@
 extends config/layout
+include config/mixins
 
 block vars
   - const title = 'Главная страница'
@@ -10,3 +11,5 @@ block links
 
 block content
   include ../modules/intro/intro
+  include ../modules/reason/reason
+  include ../modules/reason/reason-second

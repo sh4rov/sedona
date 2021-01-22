@@ -1,0 +1,44 @@
+.reason {
+
+  &__content {
+    padding: 53px 30px 45px;
+    background-color: $blue;
+    text-align: center;
+  }
+
+  &__title,
+  &__numb,
+  &__desc {
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__numb {
+    margin-bottom: 15px;
+  }
+
+  &__desc {
+    letter-spacing: -1px;
+  }
+
+  &__decor {
+    min-height: 256px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__decor_city {
+    background-image: url('../img/photo-city@1x.jpg');
+  }
+
+  &__decor_bridge {
+    background-image: url('../img/photo-bridge@1x.jpg');
+  }
+
+
+}
