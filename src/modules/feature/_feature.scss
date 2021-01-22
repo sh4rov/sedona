@@ -1,0 +1,40 @@
+.feature {
+  padding: 30px 22px 42px;
+
+  &__box:not(:last-of-type) { margin-bottom: 22px; }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__icon {
+    fill: $blue;
+    margin-right: 12px;
+
+    &_house {
+      width: 37px;
+      height: 37px;
+    }
+
+    &_gift {
+      width: 32px;
+      height: 38px;
+    }
+
+    &_burger {
+      width: 37px;
+      height: 35px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    transform: translateY(5px);
+  }
+
+  &__desc {
+    margin-left: 50px;
+  }
+}

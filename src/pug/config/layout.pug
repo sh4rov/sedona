@@ -12,16 +12,15 @@ html(lang="ru")
     .visually-hidden
       //- include sprite svg icons
       include svg.pug
-    .wrapper
 
-      //- Header
-      include ../../modules/header/header.pug
+    //- Header
+    include ../../modules/header/header.pug
 
-      main.content
-        block content
+    main.content
+      block content
 
-      //- Footer
-      include ../../modules/footer/footer.pug
+    //- Footer
+    include ../../modules/footer/footer.pug
 
     block scripts
       script(src='js/main.min.js')
