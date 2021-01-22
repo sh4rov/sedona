@@ -1,16 +1,45 @@
 .reason {
 
+  $reason: '.reason';
+
+  &_gray {
+    background-color: $gray;
+  }
+
   &__content {
     padding: 53px 30px 45px;
     background-color: $blue;
     text-align: center;
+
+    .reason__title,
+    .reason__numb,
+    .reason__desc {
+      color: $white;
+    }
   }
 
-  &__title,
-  &__numb,
-  &__desc {
-    color: $white;
-    text-transform: uppercase;
+  &__box {
+    position: relative;
+    max-width: 246px;
+    padding-top: 32px;
+    padding-bottom: 30px;
+
+    margin: 0 auto;
+    text-align: center;
+
+
+    &:not(:last-of-type)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 280px;
+      height: 1px;
+
+      transform: translateX(-50%);
+
+      background-color: rgba(0, 0, 0, .1);
+    }
   }
 
   &__title {
