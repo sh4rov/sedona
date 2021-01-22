@@ -8,6 +8,11 @@
 .h-lvl-2 {
   font-size: rem(18px);
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.h-lvl-3 {
+  @extend .h-lvl-2;
 }
 
 .title {
@@ -15,7 +20,9 @@
 }
 
 .desc {
-  
+  font-size: rem(14px);
+  text-transform: uppercase;
+  line-height: normal;
 }
 
 .numb {
