@@ -1,7 +1,8 @@
 .intro {
 
   &__top {
-    padding-top: 75px;
+    @extend .tac;
+    padding-top: 47px;
     padding-bottom: 48px;
     background-image: url('../img/hero-shape.svg'),
                       url('../img/photo-background@1x.jpg');
@@ -43,15 +44,15 @@
 
   &__text-svg {
     &_first {
-      width: 190px;
-      height: 45px;
+      width: 146px;
+      height: 34px;
       fill: $blue;
       margin-bottom: 10px;
     }
   
     &_second {
-      width: 256px;
-      height: 30px;
+      width: 200px;
+      height: 22px;
       fill: #766357;
     }
   
@@ -65,12 +66,20 @@
   }
 
   &__title {
-    text-align: center;
+    margin-bottom: 30px;
     text-transform: uppercase;
-    line-height: 1.23;
+    line-height: 1.4;
+  }
+
+  &__desc {
+    font-size: rem(14px);
+    text-transform: uppercase;
+    line-height: 1.85;
+    letter-spacing: 0.1px;
   }
 
   &__bottom {
+    @extend .tac;
     position: relative;
     overflow-x: hidden;
     padding-top: 42px;

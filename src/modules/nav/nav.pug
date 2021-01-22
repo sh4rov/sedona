@@ -1,4 +1,4 @@
-nav.nav
+nav.nav.nav_opened
   button(type='button').button.nav__button.js-toggle
     svg(width="23" height="22")
       use.nav__icon(xlink:href='#icon-menu')
@@ -7,6 +7,6 @@ nav.nav
     each value in nav
       li.nav__item: a.nav__link(href= value.link)= value.title
 
-    
+
   .nav__logo
     include ../../components/main-logo/main-logo
