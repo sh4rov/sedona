@@ -1,9 +1,11 @@
 .hotels {
+  overflow-y: hidden;
   
   &__head {
     padding-top: 32px;
     padding-bottom: 30px;
     text-align: center;
+    background-color: $white;
   }
 
   &__title {
@@ -16,6 +18,7 @@
   }
 
   &__button {
+    position: relative;
     display: block;
     width: 100%;
     border: 0;
@@ -32,6 +35,17 @@
 }
 
 .hotels-search {
+  position: absolute;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: transform 250ms ease, opacity 250ms ease;
+  opacity: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+
+  &_open {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
   &__inner {
     padding: 30px 20px 50px;
@@ -41,15 +55,17 @@
     display: flex;
   }
 
+  &__row > * {
+    width: rem(38px);
+    height: rem(38px);
+  }
+
   &__box {
 
     &_people {
       max-width: 114px;
       display: inline-flex;
-    }
-
-    &_adult {
-      margin-right: auto;
+      flex-direction: column;
     }
 
     &_children {
@@ -57,7 +73,7 @@
     }
   }
 
-  &__box:not(:last-of-type) {
+  &__box_gap {
     margin-bottom: 14px;
   }
 
@@ -67,11 +83,29 @@
     text-transform: uppercase;
     font-size: rem(14px);
     font-weight: 700;
+  }
+
+
+  &__button,
+  &__value {
+
+    &:focus {
+      z-index: 1;
+    }
+  }
+
+  &__value:not(.hotels-search__value_number) {
     padding: 14px;
+  }
+
+  &__value_number {
+    @extend .tac;
+    padding: 0.4em;
   }
 
   &__title {
     display: block;
+    padding: 14px;
     
     &::after {
       content: ':';
@@ -84,6 +118,7 @@
     background-color: $gray;
     border: none;
     font-family: inherit;
+    color: $black;
 
     &_people {
       max-width: 100%;
@@ -91,6 +126,30 @@
 
     &_full {
       width: 100%;
+    }
+  }
+
+  &__button {
+
+    &_value {
+      font-size: rem(16px);
+      color: #a9a9a9;
+    }
+
+    &_main {
+      display: block;
+      min-width: 280px;
+      margin: 45px auto 0;
+      padding: 20px;
+      font-size: rem(21px);
+      font-weight: 700;
+      color: $white;
+      background-color: $blue;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
