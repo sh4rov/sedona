@@ -1,0 +1,80 @@
+section.hotels
+  .hotels__box
+    .hotels__head
+      h2.h-lvl-2.hotels__title Заинтересовались?
+      p.desc.hotels__desc Укажите предполагаемые даты поездки и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;седоне
+    button(
+      type='button',
+      class='hotels__button'
+    )
+      | Поиск&nbsp;гостиницы&nbsp;в&nbsp;седоне
+  .hotels-search
+    form(action="")
+      .hotels-search__inner
+        .hotels-search__box.hotels-search__box_gap
+          span.hotels-search__title Дата заезда
+          input(
+            class='hotels-search__value hotels-search__value_full',
+            type='date',
+            value="2014-04-24"
+          )
+        .hotels-search__box.hotels-search__box_gap
+          span.hotels-search__title Дата Выезда
+          input(
+            class='hotels-search__value hotels-search__value_full',
+            type='date',
+            value="2014-07-04"
+          )
+        .row
+          .hotels-search__box.hotels-search__box_people.hotels-search__box_adult
+            span.hotels-search__title Взрослые
+            .hotels-search__row
+              button(
+                type='button'
+                class='btn hotels-search__button hotels-search__button_down'
+                id='substract'
+              )
+                span &minus;
+              input(
+                class='hotels-search__value hotels-search__value_number hotels-search__value_people'
+                id='inputValue'
+                type='number'
+                min='0'
+                max='100'
+                step='1'
+                value='2'
+              )
+              button(
+                type='button'
+                class='btn hotels-search__button hotels-search__button_up'
+                id='add'
+              )
+                span &plus;
+          .hotels-search__box.hotels-search__box_people.hotels-search__box_children
+            span.hotels-search__title Дети
+            .hotels-search__row
+              button(
+                type='button'
+                class='btn hotels-search__button hotels-search__button_down'
+                id='substract'
+              )
+                span &minus;
+              input(
+                class='hotels-search__value hotels-search__value_number hotels-search__value_people'
+                id='inputValue'
+                type='number'
+                min='0'
+                max='100'
+                step='1'
+                value='0'
+              )
+              button(
+                type='button'
+                class='btn hotels-search__button hotels-search__button_up'
+                id='add'
+              )
+                span &plus;
+        button(
+          type='button'
+          class='btn hotels-search__button hotels-search__button_main'
+        ) Найти

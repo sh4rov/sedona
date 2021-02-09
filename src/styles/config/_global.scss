@@ -1,5 +1,5 @@
 .tac { text-align: center }
-
+.row { display: flex; }
 .container {
   padding-left: 32px;
   padding-right: 32px;
@@ -15,8 +15,9 @@
   @extend .h-lvl-2;
 }
 
-.title {
-
+.btn {
+  border: transparent;
+  font-family: inherit;
 }
 
 .desc {
